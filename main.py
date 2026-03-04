@@ -43,5 +43,4 @@ if __name__ == "__main__":
     t = threading.Thread(target=voice, args=(window,), daemon=True)
     t.start()
 
-
     sys.exit(app.exec_())
