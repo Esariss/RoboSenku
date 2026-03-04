@@ -13,7 +13,6 @@ class STT:
 #-------слушаем-микрофон------------------------------------------------------------------------------------------------
 
             with sr.Microphone() as s:
-                print("Говори...")
                 self.rec.adjust_for_ambient_noise(s)
                 self.audio = self.rec.listen(s)
 
@@ -26,7 +25,6 @@ class STT:
 #-------если-текст-не-распознан------------------------------------------------------------------------------------------
 
             except sr.UnknownValueError:
-                print("no valid text")
                 self.text = ""
 
         except sr.exceptions.RequestError:
