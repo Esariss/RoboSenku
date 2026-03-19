@@ -21,7 +21,6 @@ class STT:
             try:
                 self.text = self.rec.recognize_google(self.audio, language="ru-RU")
                 print(self.text)
-
 #-------если-текст-не-распознан------------------------------------------------------------------------------------------
 
             except sr.UnknownValueError:
